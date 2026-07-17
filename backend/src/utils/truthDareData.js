@@ -30,6 +30,9 @@ const truthCards = [
   { id: 't_23', type: 'truth', text: 'Kalau gua ada di depan lu sekarang, bagian mana yang pertama kali bakal lu remes?' },
   { id: 't_24', type: 'truth', text: 'Adegan "kita" mana yang paling sering lu putar ulang di kepala lu?' },
   { id: 't_25', type: 'truth', text: 'Paling nakal apa sih yang pernah lu lakuin pas kita lagi VC?' },
+  { id: 't_26', type: 'truth', text: 'Kalau kita lagi di bioskop sepi terus nggak ada orang, hal nakal apa yang paling pengen lu lakuin ke gua?' },
+  { id: 't_27', type: 'truth', text: 'Menurut lu, di antara semua sisi gua, mana yang paling bikin lu nggak bisa nahan diri buat gak nyentuh gua?' },
+  { id: 't_28', type: 'truth', text: 'Jujur, seberapa sering lu ngeliatin badan gua pas kita lagi VC terus ngebayangin hal-hal nakal?' },
 ];
 
 const dareCards = [
@@ -58,6 +61,11 @@ const dareCards = [
   { id: 'd_23', type: 'dare', text: 'Kirim foto lu yang paling bikin lu ngerasa seksi, yang bikin gua langsung *tegang*.' },
   { id: 'd_24', type: 'dare', text: 'VC sekarang, tutup mata lu, terus biarin gua arahin tangan lu ke bagian yang mau gua sentuh.' },
   { id: 'd_25', type: 'dare', text: 'Tantangan: 10 menit ke depan jangan pake baju/celana yang "layak", buktiin pake foto/video singkat ke gua!' }, 
+  { id: 'd_26', type: 'dare', text: 'Ambil handphone lu, terus rekam VN suara napas lu yang berat selama 15 detik, kirim ke gua sekarang.' },
+  { id: 'd_27', type: 'dare', text: 'Pake parfum yang paling lu tau gua suka banget, terus VN ke gua ceritain gimana rasanya kalo gua cium leher lu pake wangi itu.' },
+  { id: 'd_28', type: 'dare', text: 'Bikin aturan main nakal buat gua, satu peraturan yang WAJIB gua patuhi setiap kali kita ketemu nanti.' },
+  { id: 'd_29', type: 'dare', text: 'Selfie dari angle yang bikin gua bisa liat lekukan tubuh lu, kasih caption seberapa pengen lu dipeluk gua sekarang.' },
+  { id: 'd_30', type: 'dare', text: 'Tantangan: Lu harus jadi bos selama 5 menit. Kasih perintah apapun ke gua, dan gua harus bilang "Iya, sayang" apapun perintahnya.' },
 ];
 
 module.exports = { truthCards, dareCards };
