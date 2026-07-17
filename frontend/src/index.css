@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+body {
+  @apply bg-midnight-900 text-white font-body;
+  background-image: radial-gradient(circle at 20% 20%, rgba(245, 50, 106, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(93, 63, 211, 0.18), transparent 45%);
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-blush-500/50 rounded-full;
+}
+
+.tile-board-shell {
+  @apply grid gap-[2px] bg-white/10 p-1 rounded-xl shadow-glow;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

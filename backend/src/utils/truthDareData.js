@@ -1,0 +1,63 @@
+/**
+ * Truth or Dare card data. Lives on the backend so the server remains the
+ * single source of truth for shuffling / draw order (prevents client-side
+ * tampering with which card comes up next).
+ */
+
+const truthCards = [
+  { id: 't_01', type: 'truth', text: 'Apa momen paling berkesan waktu kita pertama kali ketemu?' },
+  { id: 't_02', type: 'truth', text: 'Apa hal kecil yang aku lakukan yang bikin kamu jatuh cinta lebih dalam?' },
+  { id: 't_03', type: 'truth', text: 'Kapan terakhir kali kamu kangen banget sama aku dan gak bilang?' },
+  { id: 't_04', type: 'truth', text: 'Apa satu ketakutan terbesar kamu soal hubungan jarak jauh kita?' },
+  { id: 't_05', type: 'truth', text: 'Kalau bisa teleport sekarang, apa hal pertama yang mau kamu lakukan sama aku?' },
+  { id: 't_06', type: 'truth', text: 'Apa lagu yang selalu mengingatkan kamu sama aku?' },
+  { id: 't_07', type: 'truth', text: 'Momen apa yang bikin kamu yakin aku adalah orang yang tepat?' },
+  { id: 't_08', type: 'truth', text: 'Apa kebiasaan aku yang paling kamu rindukan?' },
+  { id: 't_09', type: 'truth', text: 'Kapan terakhir kali kamu nangis karena kangen?' },
+  { id: 't_10', type: 'truth', text: 'Apa hal yang belum pernah kamu ceritakan tapi pengen aku tahu?' },
+  { id: 't_11', type: 'truth', text: 'Apa impian kamu buat kita berdua di masa depan?' },
+  { id: 't_12', type: 'truth', text: 'Apa yang bikin kamu merasa paling dicintai sama aku?' },
+  { id: 't_13', type: 'truth', text: 'Kalau kita ketemu besok, apa yang pertama kali mau kamu lakukan?' },
+  { id: 't_14', type: 'truth', text: 'Apa satu hal yang ingin kamu ubah dari cara kita komunikasi?' },
+  { id: 't_15', type: 'truth', text: 'Apa panggilan sayang favorit kamu buat aku?' },
+  { id: 't_16', type: 'truth', text: 'Jujur deh, fantasi terliar lu kalau kita lagi berdua itu kayak gimana?' },
+  { id: 't_17', type: 'truth', text: 'Bagian tubuh gua yang mana nih yang paling bikin lu sange berat?' },
+  { id: 't_18', type: 'truth', text: 'Kalau kita lagi berduaan, hal pertama yang mau lu lakuin ke gua itu apa?' },
+  { id: 't_19', type: 'truth', text: 'Apa hal paling nakal yang pernah lewat di otak lu pas lagi mikirin gua?' },
+  { id: 't_20', type: 'truth', text: 'Gaya "sentuhan" kayak gimana sih yang lu paling demen pas sama gua?' },
+  { id: 't_21', type: 'truth', text: 'Apa sih yang paling bikin lu horny pas kita lagi VC-an?' },
+  { id: 't_22', type: 'truth', text: 'Sering banget kaga lu mikirin hal-hal "itu" pas lagi sendirian?' },
+  { id: 't_23', type: 'truth', text: 'Kalau gua ada di depan lu sekarang, bagian mana yang pertama kali bakal lu remes?' },
+  { id: 't_24', type: 'truth', text: 'Adegan "kita" mana yang paling sering lu putar ulang di kepala lu?' },
+  { id: 't_25', type: 'truth', text: 'Paling nakal apa sih yang pernah lu lakuin pas kita lagi VC?' },
+];
+
+const dareCards = [
+  { id: 'd_01', type: 'dare', text: 'Kirim voice note nyanyi lagu favorit kita sekarang juga.' },
+  { id: 'd_02', type: 'dare', text: 'Kirim foto/selfie kamu saat ini, tanpa persiapan!' },
+  { id: 'd_03', type: 'dare', text: 'Tulis pesan cinta 3 kalimat dan kirim sekarang.' },
+  { id: 'd_04', type: 'dare', text: 'Video call selama 30 detik dan bilang alasan kamu sayang aku.' },
+  { id: 'd_05', type: 'dare', text: 'Ceritakan mimpi paling absurd yang pernah kamu punya soal kita.' },
+  { id: 'd_06', type: 'dare', text: 'Kirim voice note tertawa selama 10 detik.' },
+  { id: 'd_07', type: 'dare', text: 'Ganti foto profil chat kamu dengan foto kita berdua selama 1 jam.' },
+  { id: 'd_08', type: 'dare', text: 'Buat puisi singkat 4 baris tentang rindu, kirim di chat.' },
+  { id: 'd_09', type: 'dare', text: 'Kirim emoji story dari hari ini tanpa kata-kata, biar aku tebak.' },
+  { id: 'd_10', type: 'dare', text: 'Bilang "aku sayang kamu" dalam 3 bahasa berbeda lewat voice note.' },
+  { id: 'd_11', type: 'dare', text: 'Kirim foto tempat kamu sekarang berada.' },
+  { id: 'd_12', type: 'dare', text: 'Peluk bantal dan bayangin itu aku selama 10 detik, ceritakan rasanya.' },
+  { id: 'd_13', type: 'dare', text: 'Kirim satu kenangan foto lama kita dan ceritakan kenapa itu spesial.' },
+  { id: 'd_14', type: 'dare', text: 'Buat janji kecil untuk pertemuan berikutnya, ucapkan sekarang.' },
+  { id: 'd_15', type: 'dare', text: 'Nyanyikan reff lagu galau favorit kamu lewat voice note.' },
+  { id: 'd_16', type: 'dare', text: 'Kirim foto atau VN yang bikin gua kangen setengah mati, bebas deh lu mau gaya gimana!' },
+  { id: 'd_17', type: 'dare', text: 'Ceritain sedetail mungkin apa yang mau lu lakuin ke gua di atas ranjang nanti.' },
+  { id: 'd_18', type: 'dare', text: 'VN berbisik, bisikin hal paling "nakal" yang pengen lu lakuin ke gua sekarang.' },
+  { id: 'd_19', type: 'dare', text: 'Kirim foto outfit paling menggoda yang lu punya sekarang!' },
+  { id: 'd_20', type: 'dare', text: 'Jawab jujur: baju apa yang pengen lu liat gua pake pas kita ketemu nanti?' },
+  { id: 'd_21', type: 'dare', text: 'Kirim VN desahan tipis atau panggil nama gua dengan suara paling seksi yang lu punya.' },
+  { id: 'd_22', type: 'dare', text: 'Tulis deskripsi 3 paragraf, detail banget, tentang apa yang bakal kita lakuin di kamar nanti.' },
+  { id: 'd_23', type: 'dare', text: 'Kirim foto lu yang paling bikin lu ngerasa seksi, yang bikin gua langsung *tegang*.' },
+  { id: 'd_24', type: 'dare', text: 'VC sekarang, tutup mata lu, terus biarin gua arahin tangan lu ke bagian yang mau gua sentuh.' },
+  { id: 'd_25', type: 'dare', text: 'Tantangan: 10 menit ke depan jangan pake baju/celana yang "layak", buktiin pake foto/video singkat ke gua!' }, 
+];
+
+module.exports = { truthCards, dareCards };
