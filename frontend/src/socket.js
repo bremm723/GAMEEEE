@@ -1,6 +1,6 @@
 import { io } from 'socket.io-client';
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://40f5-114-10-119-174.ngrok-free.app';
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://2ae5-114-10-116-175.ngrok-free.app';
 
 // autoConnect is false so LandingPage controls exactly when the handshake begins
 export const socket = io(SOCKET_URL, {
